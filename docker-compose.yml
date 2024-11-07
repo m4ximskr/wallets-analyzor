@@ -1,0 +1,11 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: wallets-analyzor-app
+    container_name: wallets-tracking-analyzor-container
+    ports:
+      - "3000:3000"
+    env_file:
+      - .env
